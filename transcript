@@ -1,0 +1,52 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project servo
+# Compile of servo_tb.vhd failed with 11 errors.
+# Compile of servo_tb.vhd failed with 14 errors.
+# Compile of servo_tb.vhd failed with 27 errors.
+# Compile of servo_tb.vhd failed with 27 errors.
+# Compile of servo_tb.vhd was successful.
+vsim -voptargs="+acc" work.servo_ctrl_tb
+# vsim -voptargs=""+acc"" work.servo_ctrl_tb 
+# Start time: 10:16:35 on Nov 10,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.servo_pkg(body)
+# Loading work.servo_ctrl_tb(sim)#1
+# Loading work.servo_ctrl(rtl)#1
+
+add wave /servo_ctrl_tb/clk_s /servo_ctrl_tb/reset_s
+add wave -radix unsigned /servo_ctrl_tb/code_s
+add wave /servo_ctrl_tb/pwm_s
+run -all
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /servo_ctrl_tb/u_dut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /servo_ctrl_tb/u_dut
+# ** Note: MIN code high_ticks = 50000
+#    Time: 21000210 ns  Iteration: 0  Instance: /servo_ctrl_tb
+# ** Note: MID code high_ticks = 74975
+#    Time: 101499710 ns  Iteration: 0  Instance: /servo_ctrl_tb
+# ** Note: MAX code high_ticks = 100000
+#    Time: 182000210 ns  Iteration: 0  Instance: /servo_ctrl_tb
+# Break key hit
+# Simulation stop requested.
+# End time: 11:19:48 on Nov 10,2025, Elapsed time: 1:03:13
+# Errors: 0, Warnings: 10
